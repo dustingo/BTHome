@@ -64,9 +64,9 @@ ROBOTSTXT_OBEY = False
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'BTHOMESpider.pipelines.BthomespiderPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'BTHOMESpider.pipelines.BthomespiderPipeline': 3,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -91,4 +91,5 @@ ROBOTSTXT_OBEY = False
 from fake_useragent import UserAgent
 fu = UserAgent()
 User_Agent = fu.random
-FEED_EXPORT_ENCODING = "gb18030"
+#FEED_EXPORT_ENCODING = "gb18030"
+Mongo_config = {'MONGO_HOST':'127.0.0.1','MONGO_PORT':27017,'MONGO_DBNAME':'BTHome','MONGO_DOCNAME':'torrent'}
